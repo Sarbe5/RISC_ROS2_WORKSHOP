@@ -1,0 +1,37 @@
+import rclpy
+from rclpy.node import Node
+from std_msgs.msg import String
+
+class PublisherHelloNode(Node):
+    def __init__(self):
+        super().__init__('publisher_hello_node')    #name of the node
+        self.publisher_ = self.create_publisher(String, 'hello_topic', 10)
+
+        '''
+        creates the publisher with data type string, topic name hello_topic and queue size 10
+        queue size is the maximum number of messages to be queued for delivery to subscribers like suppose if the publisher is publishing messages faster than the subscriber can process them, the queue will store up to 10 messages before dropping the oldest ones. 
+        When the 11th message goes the 1st message is dropped
+        '''
+
+        timer_period = 1.0  # seconds #time period of calling the timer callback function
+        self.timer = self.create_timer(timer_period, self.timer_callback) #creates a timer that calls the timer_callback function
+        self.i = 0 #counter variable
+        self.get_logger().info("Publisher Node has been started") #logs the message to the console
+        
+    def timer_callback(self):
+        msg = String()
+        msg.data = f'Hello, this is message number {self.i}'  #creates the message to be published #fstring is used to format the string with the value of i
+        self.publisher_.publish(msg)  #publishes the message
+        self.get_logger().info(f'Publishing: "{msg.data}"')  #logs the published message to the console
+        self.i += 1  #increments the counter variable
+
+def main(args=None):
+    rclpy.init(args=args)  #initializes the ROS2 python client library
+    publisher_hello_node = PublisherHelloNode() #creates an instance of the PublisherHelloNode class
+    rclpy.spin(publisher_hello_node)  #keeps the node running and processing callbacks
+    publisher_hello_node.destroy_node()  #destroys the node when done
+    rclpy.shutdown()  #shuts down the ROS2 python client library
+
+if __name__ == '__main__':
+    main()
+

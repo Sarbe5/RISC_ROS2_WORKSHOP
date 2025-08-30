@@ -1,0 +1,11 @@
+# VS Code settings
+.vscode/
+
+# VS Code workspace files
+*.code-workspace
+
+# Local history (if enabled by extension)
+.history/
+
+# Logs
+*.log
