@@ -18,10 +18,10 @@ class PublisherNode(Node):
         self.i = 0 #counter variable
         
     def timer_callback(self):
-        msgl = String()
-        msgl.data = f'Hello, this is message number {self.i}'  #creates the message to be published #fstring is used to format the string with the value of i
-        self.publisher_.publish(msgl)  #publishes the message
-        self.get_logger().info(f'Publishing: "{msgl.data}"')  #logs the published message to the console
+        msg = String()
+        msg.data = f'Hello, this is message number {self.i}'  #creates the message to be published #fstring is used to format the string with the value of i
+        self.publisher_.publish(msg)  #publishes the message
+        self.get_logger().info(f'Publishing: "{msg.data}"')  #logs the published message to the console
         self.i += 1  #increments the counter variable                   
     
 def main(args=None):
