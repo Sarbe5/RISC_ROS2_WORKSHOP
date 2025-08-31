@@ -105,7 +105,7 @@ This repository is designed to work with the franka_ros2 Docker environment. Mak
 
 2. **Clone this learning repository:**
    ```bash
-   git clone <this-repository-url> RISC_BOOTCAMP_ROS
+   git clone https://github.com/Sarbe5/RISC_ROS2_WORKSHOP
    cd RISC_BOOTCAMP_ROS
    ```
 
