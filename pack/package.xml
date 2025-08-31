@@ -1,19 +1,25 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>pub_sub</name>
+  <name>pack</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="connectsarbeswar@gmail.com">user</maintainer>
+  <maintainer email="rohitvn1401@gmail.com">rohit</maintainer>
   <license>MIT</license>
-
-  <depend>rclpy</depend>
-  <depend>std_msgs</depend>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>turtlesim</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>example_interfaces</depend> 
+  <depend>rosidl_default_generators</depend> 
+  <depend>rosidl_interface_packages</depend>
 
   <export>
     <build_type>ament_python</build_type>
