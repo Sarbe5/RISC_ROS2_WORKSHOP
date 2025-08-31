@@ -25,7 +25,8 @@ setup(
             "listner = pack.listner:main",
             "move_st = pack.move_st:main",
             "move_circle = pack.move_circle:main",
-            "move_spiral = pack.move_spiral:main"
+            "move_spiral = pack.move_spiral:main",
+            "move_back_and_forth = pack.back_and_forth:main"
         ],
     },
 )
