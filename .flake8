@@ -1,2 +1,3 @@
 [flake8]
-ignore = Q000
+ignore = Q000,Q001
+max-line-length = 290
