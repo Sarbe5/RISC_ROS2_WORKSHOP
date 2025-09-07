@@ -1,6 +1,10 @@
 name: ROS 2 CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   build-and-test:
@@ -10,10 +14,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup ROS 2
+      - name: Setup ROS 2 Humble
         uses: ros-tooling/setup-ros@v0.7
         with:
-          required-ros-distributions: humble   # or foxy/galactic/iron depending on your ROS 2 version
+          required-ros-distributions: humble
 
       - name: Install dependencies
         run: |
