@@ -1,8 +1,9 @@
-import rclpy
-from rclpy.node import Node
-from geometry_msgs.msg import Twist
 import math
 import time
+
+import rclpy
+from geometry_msgs.msg import Twist
+from rclpy.node import Node
 
 
 class TurtleSquare(Node):
