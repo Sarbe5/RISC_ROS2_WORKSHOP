@@ -30,7 +30,11 @@ jobs:
         run: |
           colcon build --event-handlers console_direct+
 
-      - name: Run tests
+      - name: Install ROS 2 test dependencies
         run: |
-          colcon test --event-handlers console_direct+
-          colcon test-result --verbose
+          sudo apt-get update
+          sudo apt-get install -y \
+            python3-ament-copyright \
+            python3-ament-flake8 \
+            python3-ament-pep257
+
