@@ -21,7 +21,8 @@ setup(
     entry_points={
         'console_scripts': [
             'publisher_hello_node = publisher_node.publisher_hello_node:main'
-            # executable name = package_name:publisher_hello_node.py file : main function in the file
+            # executable name = package_name:publisher_hello_node.py file :
+            # main function in the file
         ],
     },
 )

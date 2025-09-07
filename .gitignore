@@ -1,11 +1,25 @@
 # VS Code settings
 .vscode/
-
-# VS Code workspace files
 *.code-workspace
 
-# Local history (if enabled by extension)
+# Local history (VSCode extension)
 .history/
 
 # Logs
 *.log
+
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Colcon test results
+test_results/
+
+# Misc
+.DS_Store

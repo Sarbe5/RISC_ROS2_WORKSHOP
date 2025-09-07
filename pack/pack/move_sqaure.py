@@ -4,6 +4,7 @@ from geometry_msgs.msg import Twist
 import math
 import time
 
+
 class TurtleSquare(Node):
     def __init__(self):
         super().__init__('turtle_square')
@@ -18,7 +19,7 @@ class TurtleSquare(Node):
         side_length = 2.0   # seconds of forward motion (adjust for distance)
         speed_linear = 2.0  # forward speed
         angular_speed = math.pi / 4  # rad/s = 45°/s
-        relative_angle = math.pi / 2 # 90° turn
+        relative_angle = math.pi / 2  # 90° turn
 
         twist = Twist()
 
