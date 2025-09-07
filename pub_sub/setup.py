@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'pub=pub_sub.pub:main'
-            'sub=pub_sub.sub:main'
+            'pub = pub_sub.pub:main'
+            'sub = pub_sub.sub:main'
         ],
     },
 )
